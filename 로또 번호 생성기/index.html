@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>로또 번호 생성기</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="main-container">
+      <h1 class="header-title" id="lottoNumber">로또 번호 생성기</h1>
+
+      <!-- 시작 부분 -->
+      <article class="lotto-paper">
+        <div class="lotto-header">
+          <div class="header-alpha-box">A</div>
+          <div class="header-price-area">1,000원</div>
+        </div>
+        <!-- 번호 0 ~ 45 -->
+        <main class="number-box">
+          <div class="number-line">
+            <div class="num-slot">1</div>
+            <div class="num-slot">2</div>
+            <div class="num-slot">3</div>
+            <div class="num-slot">4</div>
+            <div class="num-slot">5</div>
+            <div class="num-slot">6</div>
+            <div class="num-slot">7</div>
+          </div>
+
+          <div class="number-line">
+            <div class="num-slot">8</div>
+            <div class="num-slot">9</div>
+            <div class="num-slot">10</div>
+            <div class="num-slot">11</div>
+            <div class="num-slot">12</div>
+            <div class="num-slot">13</div>
+            <div class="num-slot">14</div>
+          </div>
+
+          <div class="number-line">
+            <div class="num-slot">15</div>
+            <div class="num-slot">16</div>
+            <div class="num-slot">17</div>
+            <div class="num-slot">18</div>
+            <div class="num-slot">19</div>
+            <div class="num-slot">20</div>
+            <div class="num-slot">21</div>
+          </div>
+
+          <div class="number-line">
+            <div class="num-slot">22</div>
+            <div class="num-slot">23</div>
+            <div class="num-slot">24</div>
+            <div class="num-slot">25</div>
+            <div class="num-slot">26</div>
+            <div class="num-slot">27</div>
+            <div class="num-slot">28</div>
+          </div>
+
+          <div class="number-line">
+            <div class="num-slot">29</div>
+            <div class="num-slot">30</div>
+            <div class="num-slot">31</div>
+            <div class="num-slot">32</div>
+            <div class="num-slot">33</div>
+            <div class="num-slot">34</div>
+            <div class="num-slot">35</div>
+          </div>
+
+          <div class="number-line">
+            <div class="num-slot">36</div>
+            <div class="num-slot">37</div>
+            <div class="num-slot">38</div>
+            <div class="num-slot">39</div>
+            <div class="num-slot">40</div>
+            <div class="num-slot">41</div>
+            <div class="num-slot">42</div>
+          </div>
+
+          <div class="number-line">
+            <div class="num-slot">43</div>
+            <div class="num-slot">44</div>
+            <div class="num-slot">45</div>
+          </div>
+        </main>
+
+        <footer>
+          <div class="footer-box">
+            <div>자동 및 반자등 선택</div>
+            <div class="mark-box" id="autoMark"></div>
+          </div>
+          <div class="footer-box">
+            <div>취소</div>
+            <div class="mark-box"></div>
+          </div>
+        </footer>
+      </article>
+      <!-- 끝 부분 -->
+
+      <!-- 버튼 -->
+      <section class="controls">
+        <input
+          class="btn-create"
+          onclick="getLotto()"
+          type="button"
+          value="자동 번호 생성"
+        />
+      </section>
+      <!--  -->
+    </div>
+  </body>
+  <script>
+    function getLotto() {
+      var numbers = [];
+      for (let i = 0; i < 6; i++) {
+        let number = Math.floor(Math.random() * 45 + 1);
+        while (numbers.includes(number)) {
+          number = Math.floor(Math.random() * 45 + 1);
+        }
+        numbers.push(number);
+      }
+      numbers.sort((a, b) => a - b);
+
+      document.getElementById("lottoNumber").innerHTML = numbers;
+    }
+  </script>
+</html>

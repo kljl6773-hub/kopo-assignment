@@ -1,0 +1,128 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: flex-stcdart;
+  padding: 40px;
+  background-color: #f0f0f0;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.header-title {
+  font-size: 24px;
+  color: #ff4d6a;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.lotto-paper {
+  width: 230px;
+  background-color: white;
+  border: 1.5px solid #ff4d6a;
+  display: flex;
+  flex-direction: column;
+}
+
+.lotto-header {
+  display: flex;
+  align-items: stretch;
+  height: 40px;
+  border-bottom: 1.5px solid #ff4d6a;
+}
+
+.header-alpha-box {
+  width: 42px;
+  background-color: white;
+  color: #ff4d6a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.header-price-area {
+  flex-grow: 1;
+  background-color: #ff4d6a;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.number-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px 5px;
+  gap: 6px;
+}
+
+.number-line {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  max-width: 206px;
+  gap: 4px;
+}
+
+.num-slot {
+  flex: 0 0 26px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ff4d6a;
+  font-size: 13px;
+  color: #ff4d6a;
+  font-weight: bold;
+  position: relative;
+}
+
+footer {
+  border-top: 1px dotted #ff4d6a;
+  padding: 12px 10px;
+  font-size: 11px;
+  color: #ff4d6a;
+  font-weight: bold;
+}
+
+.footer-box {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+.mark-box {
+  width: 22px;
+  height: 14px;
+  border: 1px solid #ff4d6a;
+  position: relative;
+}
+
+.btn-create {
+  padding: 12px 35px;
+  background-color: #ff4d6a;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
